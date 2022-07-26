@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:package_samples/controllers/counter_page_controller.dart';
 
 class CounterPage extends StatelessWidget {
   const CounterPage({Key? key}) : super(key: key);
@@ -23,18 +25,26 @@ class CounterPage extends StatelessWidget {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline4,
+            Consumer(
+              builder: (context, ref, _) {
+                final count = ref.watch(counterProvider);
+                return Text(
+                  '$count',
+                  style: Theme.of(context).textTheme.headline4,
+                );
+              }
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: Consumer(builder: (context, ref, _) {
+        final counterNotifier = ref.watch(counterProvider.notifier);
+        return FloatingActionButton(
+          onPressed: () => counterNotifier.update((state) => state = state + 1),
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        );
+      }),
     );
   }
 }
