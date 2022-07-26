@@ -4,6 +4,8 @@ import 'package:package_samples/pages/counter_page/counter_page.dart';
 class RootPage extends StatelessWidget {
   const RootPage({Key? key}) : super(key: key);
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
