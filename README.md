@@ -6,3 +6,6 @@
 
 - pedantic_mono
 - hooks_riverpod
+- freezed_annotation
+- build_runner
+- freezed
