@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:package_samples/pages/argument_page/argument_page.dart';
 import 'package:package_samples/pages/counter_page/counter_page.dart';
+import 'package:package_samples/pages/expandable_page/expandable_page.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -24,6 +25,12 @@ class RootPage extends StatelessWidget {
                 Navigator.push<Route<dynamic>>(context, ArgumentPage.route());
               },
               child: const Text('argumentPage'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push<Route<dynamic>>(context, ExpandablePage.route());
+              },
+              child: const Text('expandable_page'),
             ),
           ],
         ),
