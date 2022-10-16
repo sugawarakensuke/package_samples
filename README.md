@@ -1,6 +1,6 @@
 # package_samples
 
-パッケージの使い方を試すリポジトリ、もといパッケージに限らず色々試したりメモしたりするためのリポジトリ
+パッケージの使い方とか、色々試したりメモしたりするためのリポジトリ
 
 ## 使っているパッケージ
 
@@ -9,3 +9,4 @@
 - freezed_annotation
 - build_runner
 - freezed
+- expandable
