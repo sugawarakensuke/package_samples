@@ -21,4 +21,12 @@ class ArgumentPageController
   }
 
   Future<void> _init() async {}
+
+  void aaa (String text) {
+    print('$text');
+  }
+
+  void bbb ({String? text}) {
+    print(text);
+  }
 }
