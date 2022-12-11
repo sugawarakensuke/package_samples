@@ -28,7 +28,6 @@ class _CatApiPageState extends State<CatApiPage> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(title: const Text('RANDOM CAT API')),
       body: Container(
@@ -42,18 +41,13 @@ class _CatApiPageState extends State<CatApiPage> {
                 if (snapshot.connectionState != ConnectionState.done) {
                   return Container(
                     height: 300,
-                    width: width,
                     alignment: Alignment.center,
                     child: CircularProgressIndicator(),
                   );
                 } else {
                   final response = snapshot.data;
                   final url = jsonDecode(response!.body)['file'];
-                  return Container(
-                    height: 300,
-                    width: width,
-                    child: Image.network(url),
-                  );
+                  return Container(height: 300, child: Image.network(url));
                 }
               },
             ),
