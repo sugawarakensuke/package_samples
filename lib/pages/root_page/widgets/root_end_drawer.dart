@@ -3,6 +3,7 @@ import 'package:package_samples/pages/argument_page/argument_page.dart';
 import 'package:package_samples/pages/cat_api_page/cat_api_page.dart';
 import 'package:package_samples/pages/counter_page/counter_page.dart';
 import 'package:package_samples/pages/expandable_page/expandable_page.dart';
+import 'package:package_samples/pages/shifted_stack_page/shifted_stack_page.dart';
 
 class RootEndDrawer extends StatelessWidget {
   const RootEndDrawer({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class RootEndDrawer extends StatelessWidget {
           _buildListTile(title: '変数サンプル', route: ArgumentPage.route()),
           _buildListTile(title: '折りたたみのUI', route: ExpandablePage.route()),
           _buildListTile(title: 'ランダム猫API', route: CatApiPage.route()),
+          _buildListTile(title: 'ずらして重ねる', route: ShiftedStackPage.route()),
         ],
       ),
     );
