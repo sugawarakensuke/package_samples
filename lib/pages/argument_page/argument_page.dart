@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:package_samples/controllers/argument_page_controller.dart';
 
 class ArgumentPage extends HookConsumerWidget {
   const ArgumentPage({Key? key}) : super(key: key);
